@@ -11,35 +11,64 @@
         android:orientation="horizontal"
         android:layout_width="match_parent">
 
+        <TextView
+            android:id="@+id/display"
+            android:layout_width="match_parent"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:background="@drawable/rectangle"
+            android:layout_gravity="center_vertical"
+            android:layout_height="45dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="18sp"
+            android:textStyle="normal|bold" />
 
-    <Button
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent">
+
+
+        <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:id="@+id/uno"
-        android:onClick="mostrarToast"
+            android:onClick="asignarValor"
         android:text="1"
         android:textAlignment="center" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:onClick="mostrarToast"
-        android:paddingLeft="10dp"
-        android:id="@+id/dos"
-        android:text="2"
-        android:textAlignment="center" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="asignarValor"
+            android:paddingLeft="10dp"
+            android:id="@+id/dos"
+            android:text="2"
+            android:textAlignment="center" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:onClick="mostrarToast"
-        android:paddingLeft="10dp"
-        android:id="@+id/tres"
-        android:text="3"
-        android:textAlignment="center" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="asignarValor"
+            android:paddingLeft="10dp"
+            android:id="@+id/tres"
+            android:text="3"
+            android:textAlignment="center" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="asignarOperacion"
+            android:paddingLeft="20dp"
+            android:id="@+id/mas"
+            android:text="+"
+            android:textAlignment="center" />
     </LinearLayout>
 
     <LinearLayout
@@ -52,7 +81,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="mostrarToast"
+            android:onClick="asignarValor"
             android:paddingLeft="10dp"
             android:id="@+id/cuatro"
             android:text="4"
@@ -62,7 +91,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="mostrarToast"
+            android:onClick="asignarValor"
             android:paddingLeft="10dp"
             android:text="5"
             android:textAlignment="center" />
@@ -71,9 +100,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="mostrarToast"
+            android:onClick="asignarValor"
             android:paddingLeft="10dp"
             android:text="6"
+            android:textAlignment="center" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="asignarOperacion"
+            android:paddingLeft="20dp"
+            android:id="@+id/menos"
+            android:text="-"
             android:textAlignment="center" />
     </LinearLayout>
 
@@ -86,6 +125,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
+            android:onClick="asignarValor"
             android:layout_weight="1"
             android:text="7"
             android:textAlignment="center" />
@@ -93,6 +133,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="asignarValor"
             android:paddingLeft="10dp"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
@@ -102,10 +143,21 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="asignarValor"
             android:paddingLeft="10dp"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
             android:text="9"
+            android:textAlignment="center" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="asignarOperacion"
+            android:paddingLeft="20dp"
+            android:id="@+id/por"
+            android:text="*"
             android:textAlignment="center" />
     </LinearLayout>
 
@@ -117,11 +169,38 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="3"
             android:paddingLeft="10dp"
+            android:onClick="asignarValor"
             android:layout_gravity="center_horizontal|center_vertical"
-
             android:text="0"
+            android:textAlignment="center" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="asignarOperacion"
+            android:paddingLeft="10dp"
+            android:id="@+id/entre"
+            android:text="/"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="realizarOperacion"
+            android:paddingLeft="10dp"
+            android:id="@+id/igual"
+            android:text="="
             android:textAlignment="center" />
 
     </LinearLayout>
